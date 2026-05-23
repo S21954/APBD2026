@@ -1,6 +1,0 @@
-@Zad05_HostAddress = http://localhost:5137
-
-GET {{Zad05_HostAddress}}/api/pcs
-Accept: application/json
-
-###
