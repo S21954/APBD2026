@@ -1,0 +1,32 @@
+@host = http://localhost:5016
+
+### GET all patients
+GET {{host}}/api/patients
+Accept: application/json
+
+### GET patients with search
+GET {{host}}/api/patients?search=an
+Accept: application/json
+
+### POST assign bed with closed interval
+POST {{host}}/api/patients/90010112345/bedassignments
+Content-Type: application/json
+Accept: application/json
+
+{
+  "from": "2026-05-20T14:00:00",
+  "to": "2026-05-30T10:00:00",
+  "bedType": "Standard",
+  "ward": "Kardiologia"
+}
+
+### POST assign bed with open-ended interval
+POST {{host}}/api/patients/85050567890/bedassignments
+Content-Type: application/json
+Accept: application/json
+
+{
+  "from": "2026-06-01T09:00:00",
+  "bedType": "Intensywna terapia",
+  "ward": "Chirurgia"
+}
